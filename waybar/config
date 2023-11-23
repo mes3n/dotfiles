@@ -1,0 +1,106 @@
+{
+    "margin-top": 2,
+    "height": 32,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["pulseaudio", "network", "battery"],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{}",
+        "format-icons": {
+            "1": "",
+            "2": "🌎",
+            "3": "",
+            "4": "<b>4</b>",
+            "5": "<b>5</b>",
+            "6": "<b>6</b>",
+            "7": "<b>7</b>",
+            "8": "<b>8</b>",
+            "9": "<b>9</b>",
+            "10": "<b>10</b>"
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [], 
+            "3": []
+        },
+    },
+    "sway/mode": {
+        "format": "  {}",
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false,
+        "interval": 5,
+    },
+    "memory": {
+        "format": "{used:0.1f}G ",
+        "interval": 5,
+    },
+    "custom/clock": {
+		"format": "<span size='120%'><b>{}</b></span>",
+        "exec": "date +'%a %b %d ─ %H:%M ─ week %W'",
+        "interval": 1,
+    },
+    // "backlight": {
+    //     "format": "{percent}% {icon}",
+    //     "format-icons": ["", ""]
+    // },
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        // "format-good": "",
+        "format-full": "100% ",
+        "format-icons": ["", "", "", "", ""],
+		"tooltip": false,
+    },
+    "network": {
+    	"format": "{ifname}",
+	    "format-ethernet": "{ifname} ",
+        "format-wifi": "{essid} ",
+        "format-linked": "{ifname} (No IP) ",
+       	"format-disconnected": "Disconnected ⚠",
+		"tooltip": false,
+    },
+    "pulseaudio": {
+        "scroll-step": 0,
+        "format": "{icon} {volume}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+		"tooltip": false,
+        // "on-click": "pavucontrol"
+    },
+    // "custom/vpn": {
+    //     "format": "Homelab ",
+    //     "exec": "echo '{\"class\": \"connected\"}'",
+    //     "exec-if": "test -d /proc/sys/net/ipv4/conf/homelab",
+    //     "return-type": "json",
+    //     "interval": 5
+    // }
+}

@@ -1,0 +1,92 @@
+@define-color text-color #00141b;
+@define-color root-background #b3e5fc;
+@define-color hightlight #29b6f6;
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+
+    font-family: "Cantarell", "FontAwesome 6 Free Solid";
+}
+
+window#waybar {
+    background: none;
+}
+
+#workspaces button {
+    border-radius: 8px;
+    margin: 4px;
+    margin-left: 8px;
+    margin-right: 0;
+
+    padding: 0 4px;
+
+    font-size: 16px;
+    color: @root-background;
+}
+
+#workspaces button:hover {
+    background: inherit;
+    box-shadow: inherit;
+    text-shadow: inherit; 
+}
+
+#workspaces button.focused {
+    background-color: @hightlight;
+    color: @text-color;
+
+    box-shadow: 0 0 4px @hightlight;
+
+    transition: 0.4s background-color;
+}
+
+#mode {
+    margin-left: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    color: mix(@text-color, @root-background, 0.5);
+
+}
+
+#custom-clock {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    color: @root-background;
+}
+
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#memory,
+#cpu,
+#mpd {
+    background-color: @hightlight;
+    box-shadow: 0 0 4px @hightlight;
+
+    padding-right: 8px;
+    padding-left: 8px;
+    margin: 4px 0;
+
+    color: @text-color
+}
+
+#network.disconnected {
+    background-color: @hightlight;
+}
+
+#pulseaudio {
+	border-radius: 4px 0 0 4px;
+}
+
+#battery {
+    margin-right: 8px;
+    border-radius: 0 4px 4px 0;
+}
+

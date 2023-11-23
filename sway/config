@@ -1,0 +1,16 @@
+# vim: set filetype=swayconfig:
+# Blue config for sway (default)
+
+# Terminal launcher
+set $term alacritty --class terminal
+
+# Basic wofi and waybar
+set $status_bar waybar
+set $menu wofi 
+
+set $background ~/pictures/penguinwave.png
+
+include ~/.config/sway/common.conf
+
+client.focused #29b6f6ff #29b6f6ff #29b6f6ff #29b6f6ff
+

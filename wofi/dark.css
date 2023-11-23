@@ -1,0 +1,88 @@
+@define-color text-color #cd3423;
+@define-color background #222;
+@define-color hightlight #333;
+
+* {
+    padding: 0;
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#window {
+    background-color: transparent;
+}
+
+#img {
+    margin-right: 8px;
+}
+
+#outer-box {
+    background-color: @background;
+    border: 4px solid mix(@text-color, @background, 0.5);
+    border-radius: 4px;
+    
+    padding: 8px;
+}
+
+#input {
+    padding-left: 4px;
+    margin-bottom: 4px;
+
+    color: mix(@text-color, @hightlight, 0.2);
+    background-color: @hightlight;
+    border: none;
+}
+
+#input image {
+    margin-right: 4px;
+}
+
+#input:focus {
+    border: none;
+    margin-bottom: inherit;
+    outline: none;
+    box-shadow: none;
+}
+
+#inner-box {
+    color: mix(@text-color, @background, 0.3);
+}
+
+expander > * {
+    background-color: transparent;
+}
+
+#entry {
+    border-bottom: 2px solid mix(@text-color, @background, 0.5);
+    border-left: 2px solid mix(@text-color, @background, 0.5);
+    border-radius: 0 0 0 4px;
+
+    padding: 4px;
+    margin: 4px;
+
+    outline: none;
+    background-color: transparent;
+}
+
+expander > list > #entry {
+    color: mix(@text-color, @hightlight, 0.2);
+}
+
+expander > list > #entry:selected {
+    background-color: @background;
+    box-shadow: none;
+} 
+
+#entry:selected {
+    background-color: mix(@hightlight, @background, 0.5);
+
+    color: mix(@text-color, @hightlight, 0.2);
+}
+
+#text:selected {
+    color: inherit;
+    text-shadow: none;
+    text-decoration: none;
+}
